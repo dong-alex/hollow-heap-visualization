@@ -10,3 +10,8 @@ https://hollow-heap-visualization.netlify.app/
 Issues:
 - With the given limitations to the render library for the D3 trees, connections between multiple parents will not be working properly. Note the duplicate values rendered as they are the ones that should have been connected from other nodes.
 - Current implemntation only contains the deletion of minimum nodes. The viewbox of the SVG is not manageable.
+
+Steps:
+1. Clone the repo
+2. `yarn start` in the project directory
+3. App can be found in `localhost:3000`
