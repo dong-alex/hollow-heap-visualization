@@ -1,24 +1,26 @@
 import React, { FunctionComponent } from "react";
-import TreeVisualizer from "./components/TreeVisualizer";
-import "./App.css";
-import { MDBContainer } from "mdbreact";
-import styled from "styled-components";
+import HollowHeapVisualizer from "./components/algorithms/hollow-heaps/HollowHeapVisualizer";
+import { MDBCol, MDBRow } from "mdbreact";
 import NavigationLayout from "./components/layout/NavigationLayout";
-import Settings from "./components/Settings";
-
-const Container = styled(MDBContainer)`
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-`;
+import CodeSnippets from "./components/algorithms/hollow-heaps/CodeSnippets";
+import "./App.css";
 
 const App: FunctionComponent<{}> = () => {
   return (
     <NavigationLayout>
-      {/* Place the settings modifier here and pass it into the tree visualizer*/}
-      <Container fluid>
-        <TreeVisualizer />
-      </Container>
+      <MDBRow>
+        <MDBCol
+          size="8"
+          style={{
+            padding: "0",
+          }}
+        >
+          <HollowHeapVisualizer />
+        </MDBCol>
+        <MDBCol size="4" className="border-left border-dark">
+          <CodeSnippets />
+        </MDBCol>
+      </MDBRow>
     </NavigationLayout>
   );
 };
