@@ -52,7 +52,7 @@ const TreeVisualizer: FunctionComponent<{}> = () => {
 
   return (
     tree.length > 0 && (
-      <div style={{ height: "100%" }} ref={containerRef}>
+      <div style={{ height: "100vh" }} ref={containerRef}>
         <HollowHeapSettings onDeleteMinimum={onDeleteMinimum} />
         <Tree
           data={tree}
